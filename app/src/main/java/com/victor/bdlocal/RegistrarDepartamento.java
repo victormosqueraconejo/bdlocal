@@ -21,6 +21,8 @@ public class RegistrarDepartamento extends AppCompatActivity {
     Button btnInsertarDep;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
