@@ -41,7 +41,7 @@ public class RegistrarDepartamento extends AppCompatActivity {
                 Departamento departamento = new Departamento(codigoDep, nombreDep);
                 Manager manager = new Manager(RegistrarDepartamento.this);
 
-                long resultDep = manager.insertDep();
+                long resultDep = manager.insertDep(departamento);
 
 
 
