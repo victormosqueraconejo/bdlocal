@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,6 +45,13 @@ public class RegistrarDepartamento extends AppCompatActivity {
                 Manager manager = new Manager(RegistrarDepartamento.this);
 
                 long resultDep = manager.insertDep(departamento);
+
+                if (resultDep > 0) {
+                    Toast.makeText(RegistrarDepartamento.this, "Registrado Correctamente: " + resultDep, Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(RegistrarDepartamento.this, "NO se Registro Correctamente: " + resultDep, Toast.LENGTH_SHORT).show();
+                }
 
 
 
