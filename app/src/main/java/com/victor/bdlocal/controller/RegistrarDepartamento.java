@@ -1,18 +1,14 @@
-package com.victor.bdlocal;
+package com.victor.bdlocal.controller;
 
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
+import com.victor.bdlocal.R;
 import com.victor.bdlocal.model.Departamento;
 import com.victor.bdlocal.model.Manager;
 
@@ -20,9 +16,6 @@ public class RegistrarDepartamento extends AppCompatActivity {
 
     EditText etCdoDep, etNameDep;
     Button btnInsertarDep;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -29,7 +29,7 @@ public class Manager {
         // Creo un contenedor de valores para almacenar campos
         ContentValues valores = new ContentValues();
         valores.put("code", ciudad.getCod());
-        valores.put("names",ciudad.getNameCity());
+        valores.put("name",ciudad.getNameCity());
         long resul = db.insert("Ciudad",null,valores);//ya inserta en la bd
          return resul;
     }
@@ -40,5 +40,17 @@ public class Manager {
         valoresDep.put("name", departamento.getName());
         long resultDep = db.insert("Departamento", null, valoresDep);
         return resultDep;
+    }
+
+    public long insertUser (DatosUsuario datosUsuario) {
+        openBdWr();
+        ContentValues valoresUs = new ContentValues();
+        valoresUs.put("code_dat", datosUsuario.getCodigoUs());
+        valoresUs.put("name", datosUsuario.getNombre());
+        valoresUs.put("apellido", datosUsuario.getApellido());
+        valoresUs.put("telefono", datosUsuario.getTelefono());
+        long resultDat = db.insert("Datos", null, valoresUs);
+        return  resultDat;
+
     }
 }

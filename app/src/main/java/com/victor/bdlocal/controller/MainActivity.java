@@ -1,5 +1,6 @@
 package com.victor.bdlocal.controller;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -15,36 +16,41 @@ import com.victor.bdlocal.model.Ciudad;
 import com.victor.bdlocal.model.Manager;
 
 public class MainActivity extends AppCompatActivity {
-    Manager manager;
-    EditText etCodigo, etNombre;
-    Button btnInsertar;
+    Button btnCiudad, btnDep, btnDatos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etCodigo = findViewById(R.id.etCodigo);
-        etNombre = findViewById(R.id.etNombre);
-        btnInsertar = findViewById(R.id.btnIngresar);
+        btnCiudad = findViewById(R.id.btnInsertarCiudad);
+        btnDep = findViewById(R.id.btnInsertarDepartamento);
+        btnDatos = findViewById(R.id.btnInsertarDatosPersonales);
 
-        btnInsertar.setOnClickListener(new View.OnClickListener() {
+        btnCiudad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // CAPTURO LOS VALORES DE LAS CAJAS DE TEXTO PARA PASARLOS AL OBJETO CIUDAD
-                int codigo = Integer.parseInt(etCodigo.getText().toString());
-                String nombre = etNombre.getText().toString();// estoy almacenando lo que tienen las cajas de texto en mi variable nombre
-                Ciudad ciudad = new Ciudad(codigo,nombre);//instanciación
-                manager = new Manager(MainActivity.this);// llamo a la conexion bd
-
-                long resul = manager.insertCity(ciudad);// llamo al metodo que cree en el mananger
-                if(resul>0){
-                    Toast.makeText(MainActivity.this, "Insertado" + resul, Toast.LENGTH_SHORT).show();
-                }
-
-                Toast.makeText(MainActivity.this, "Datos no insertados" +resul, Toast.LENGTH_SHORT).show();
-
-              }
+                Intent siguiente = new Intent(MainActivity.this, insertar_ciudad.class);
+                startActivity(siguiente);
+            }
         });
+
+        btnDep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent siguiente = new Intent(MainActivity.this, RegistrarDepartamento.class);
+                startActivity(siguiente);
+            }
+        });
+
+        btnDatos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent siguiente = new Intent(MainActivity.this, insertar_datos_usuario.class);
+                startActivity(siguiente);
+            }
+        });
+
 
 
     }

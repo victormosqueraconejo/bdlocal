@@ -11,65 +11,45 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ciudad"
+        android:text="Insertar Datos"
         android:textSize="48dp"
+        android:textAlignment="center"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         />
-
-    <LinearLayout
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Codigo"
-            android:textAlignment="center"
-            android:textSize="28dp"
-            android:layout_gravity="center"/>
-        <EditText
-            android:id="@+id/etCodigo"
-            android:layout_marginTop="25dp"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nombre"
-            android:textAlignment="center"
-            android:textSize="28dp"
-            android:layout_gravity="center"/>
-        <EditText
-            android:id="@+id/etNombre"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center"
-            />
-    </LinearLayout>
 
     <Button
-        android:id="@+id/btnIngresar"
+        android:id="@+id/btnInsertarCiudad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Insertar"
+        android:text="Ciudad"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
-        android:backgroundTint="#8D8BC34A"
+        android:layout_marginBottom="50dp"
+        android:textSize="32dp"
+        android:backgroundTint="#D889FF00"
         />
 
+    <Button
+        android:id="@+id/btnInsertarDepartamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Departamentos"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:textSize="32dp"
+        android:backgroundTint="#2196F3"
+        />
+
+    <Button
+        android:id="@+id/btnInsertarDatosPersonales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos Personales"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:textSize="32dp"
+        android:backgroundTint="#FF5722"
+        />
 
 </LinearLayout>

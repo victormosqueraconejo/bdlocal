@@ -4,9 +4,6 @@ public class Ciudad {
    private int cod;
    private String nameCity;
 
-    public Ciudad() {
-    }
-
     public Ciudad(int cod, String nameCity) {
         this.cod = cod;
         this.nameCity = nameCity;
