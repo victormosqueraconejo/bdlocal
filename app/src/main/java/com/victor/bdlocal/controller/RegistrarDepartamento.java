@@ -15,7 +15,7 @@ import com.victor.bdlocal.model.Manager;
 public class RegistrarDepartamento extends AppCompatActivity {
 
     EditText etCdoDep, etNameDep;
-    Button btnInsertarDep;
+    Button btnInsertarDep, btnVolver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class RegistrarDepartamento extends AppCompatActivity {
         etCdoDep = findViewById(R.id.etCodigoDep);
         etNameDep = findViewById(R.id.etNombreDep);
         btnInsertarDep = findViewById(R.id.btnIngresarDep);
-
+        btnVolver = findViewById(R.id.btnVolver);
 
         btnInsertarDep.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +52,12 @@ public class RegistrarDepartamento extends AppCompatActivity {
             }
         });
 
-
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 }

@@ -75,5 +75,15 @@
         android:backgroundTint="#2196F3"
         />
 
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#FFEB3B"
+        />
+
 
 </LinearLayout>

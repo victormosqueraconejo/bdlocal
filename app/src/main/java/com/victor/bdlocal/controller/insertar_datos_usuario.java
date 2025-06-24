@@ -16,7 +16,7 @@ public class insertar_datos_usuario extends AppCompatActivity {
 
     Manager manager;
     EditText etCodigoUs, etNombreUs, etApellidoUs, etTelefono, etCedula;
-    Button btnInsertarDat;
+    Button btnInsertarDat, btnVolver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class insertar_datos_usuario extends AppCompatActivity {
         etApellidoUs = findViewById(R.id.etApellidoDat);
         etTelefono = findViewById(R.id.etTelefonoDat);
         etCedula =findViewById(R.id.etCedulaDat);
+        btnVolver = findViewById(R.id.btnVolver);
         btnInsertarDat = findViewById(R.id.btnInsertarDatos);
 
         btnInsertarDat.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +51,13 @@ public class insertar_datos_usuario extends AppCompatActivity {
                 }
 
 
+            }
+        });
+
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

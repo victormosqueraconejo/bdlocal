@@ -20,7 +20,7 @@ public class insertar_ciudad extends AppCompatActivity {
 
     Manager manager;
     EditText etCodigo, etNombre;
-    Button btnInsertar;
+    Button btnInsertar, btnVolver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class insertar_ciudad extends AppCompatActivity {
         etCodigo = findViewById(R.id.etCodigo);
         etNombre = findViewById(R.id.etNombre);
         btnInsertar = findViewById(R.id.btnIngresar);
-
+        btnVolver = findViewById(R.id.btnVolver);
         btnInsertar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,9 +49,15 @@ public class insertar_ciudad extends AppCompatActivity {
                     Toast.makeText(insertar_ciudad.this, "Datos no insertados" +resul, Toast.LENGTH_SHORT).show();
                 }
 
-
-
             }
         });
+
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 }
